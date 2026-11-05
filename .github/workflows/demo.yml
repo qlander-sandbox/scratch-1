@@ -1,0 +1,10 @@
+# verify-sandbox run 104: a workflow change the queue App lands. Dispatch only; nothing runs it.
+name: demo
+on:
+  workflow_dispatch:
+permissions: {}
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "verify-sandbox 104"
